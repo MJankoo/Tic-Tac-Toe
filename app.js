@@ -37,7 +37,7 @@ function doMove(event)
     check(turn);
 
     round++;
-    if(round === 9 && winned === 0) 
+    if(round === 9 && winned === false) 
     document.getElementById("result").innerHTML = "Draw!";
 }
 
