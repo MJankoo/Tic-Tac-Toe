@@ -39,12 +39,11 @@ function doMove(event)
 
     round++;
     if(round === 9 && winned === 0) 
-        alert("Remis!");
+        alert("Draw!");
 }
 
 function check(player)
 {
-    //console.log(combinations[0][0]);
     for(i=0;i<8;i++)
     {
         if(board[combinations[i][0]] === player && board[combinations[i][1]] === player && board[combinations[i][2]] === player)
@@ -55,7 +54,6 @@ function check(player)
 function win(player)
 {
     winned = true;
-    alert("Wygrywa gracz " + player + " z wynikiem " + player1Score);
 
     if(player === 1 )
         player1Score++;
@@ -109,7 +107,7 @@ window.onresize = function()
 }
 
 document.getElementById("resetButton").onclick = function() {
-    winned = 0;
+    winned = false;
     round = 0;
     board = ['','','','','','','','',''];
 
